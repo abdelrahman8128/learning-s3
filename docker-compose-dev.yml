@@ -1,14 +1,19 @@
 version: "1.2"
+
+
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
       - "4000:4000"
       - "3000:3000"
     environment:
       - ENV=development
+
     volumes:
       - .:/app
     command: npm run dev

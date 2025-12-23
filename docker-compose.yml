@@ -4,10 +4,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
       - "4000:4000"
       - "3000:3000"
     environment:
       - ENV=development
-     # - TEST_ENV_VAR=TEST_ENV_VAR
+      # - TEST_ENV_VAR=TEST_ENV_VAR
     command: npm run dev
