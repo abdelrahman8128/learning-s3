@@ -8,5 +8,6 @@ services:
       - "4000:4000"
       - "3000:3000"
     environment:
-      - ENV=development
+      - ENV=production
     command: npm run dev
+
