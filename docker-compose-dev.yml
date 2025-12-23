@@ -9,4 +9,6 @@ services:
       - "3000:3000"
     environment:
       - ENV=development
+    volumes:
+      - .:/app
     command: npm run dev
