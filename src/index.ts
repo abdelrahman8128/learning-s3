@@ -77,6 +77,6 @@ app2.get("/api/", (req: Request, res: Response) => {
 });
 app2.listen(4000, "0.0.0.0", () => {
   console.log(`Server running at http://0.0.0.0:4000`);
-  console.log("Environment Variable TEST_ENV_VAR:";
+  console.log("Environment Variable TEST_ENV_VAR:");
   console.log(process.env.TEST_ENV_VAR);
 });
