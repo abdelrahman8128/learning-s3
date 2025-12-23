@@ -53,7 +53,7 @@ app.get("/", (req, res) => {
         <title>Welcome</title>
       </head>
       <body>
-        <h1>Hi, welcome to my PBE area</h1>
+        <h1>Hi, welcome to my PBE area </h1>
       </body>
     </html>
   `);
@@ -68,7 +68,7 @@ app.listen(3000, "0.0.0.0", () => {
 });
 const app2 = (0, express_1.default)();
 app2.get("/api/", (req, res) => {
-    res.send("Hello from the second app on port 4000!");
+    res.send("Hellooo from the second app on port 4000!");
 });
 app2.listen(4000, "0.0.0.0", () => {
     console.log(`Server running at http://0.0.0.0:4000`);

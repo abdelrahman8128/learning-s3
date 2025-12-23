@@ -40,7 +40,7 @@ app.delete("/delete", async (req: Request, res: Response) => {
   if (!key) return res.status(400).json({ error: "لم يتم إرسال اسم الملف" });
 
   try {
-    await deleteFromS3(req ,res);
+    await deleteFromS3(req, res);
     res.json({ message: "تم حذف الملف بنجاح!" });
   } catch (err) {
     res.status(500).json({ error: "حصل خطأ في حذف الملف", details: err });
@@ -55,7 +55,7 @@ app.get("/", (req: Request, res: Response) => {
         <title>Welcome</title>
       </head>
       <body>
-        <h1>Hi, welcome to my PBE area</h1>
+        <h1>Hi, welcome to my PBE area </h1>
       </body>
     </html>
   `);
@@ -73,7 +73,7 @@ app.listen(3000, "0.0.0.0", () => {
 
 const app2 = express();
 app2.get("/api/", (req: Request, res: Response) => {
-  res.send("Hello from the second app on port 4000!");
+  res.send("Hellooo from the second app on port 4000!");
 });
 app2.listen(4000, "0.0.0.0", () => {
   console.log(`Server running at http://0.0.0.0:4000`);
